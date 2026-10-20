@@ -62,7 +62,6 @@ textarea{min-height:96px;resize:vertical}
 
 <form id="my_form" action="https://docs.google.com/forms/d/e/1FAIpQLSd_r-wTcn399lbXP8NmthgpWlxUKPd1fhn78Xfy_eThrWo5IQ/formResponse" method="POST" target="hidden_iframe">
 <input type="hidden" name="pageHistory" value="0,1,2">
-<input type="hidden" id="combined_text" name="entry.1145577336">
 
 <div class="group">
 <label for="input_name">お名前（フルネーム）<span class="req">必須</span></label>
@@ -82,12 +81,7 @@ textarea{min-height:96px;resize:vertical}
 <option value="シフト調整中">シフト調整中</option>
 <option value="不可">不可</option>
 </select>
-</div>
-
-<div class="group" id="reason_group">
-<div style="margin-bottom: 16px; padding: 14px 16px; border-left: 2px solid var(--rule); background: rgba(255,255,255,.6); font-size: 13px; line-height: 1.8"><span style="font-weight: 500">イベント不参加の方へ。</span><br>通常選考をいたしますので、弊社よりご連絡させていただきます。</div>
-<label for="input_reason">不参加の理由・別日程の希望など<span class="req">必須</span></label>
-<textarea id="input_reason" placeholder="不参加の理由や、別日での面談希望日などをご記入ください。"></textarea>
+<div id="reason_group" role="status" style="margin-top: 10px; padding: 14px 16px; border-left: 2px solid var(--rule); background: rgba(255,255,255,.6); font-size: 13px; line-height: 1.8"><span style="font-weight: 500">イベント不参加の方へ。</span><br>通常選考をいたしますので、弊社よりご連絡させていただきます。</div>
 </div>
 
 <div class="group">
@@ -128,7 +122,7 @@ textarea{min-height:96px;resize:vertical}
 
 <div class="group">
 <label for="input_contact">連絡可能日（平日で3候補以上）<span class="req">必須</span></label>
-<textarea id="input_contact" placeholder="例：10/20 14:00〜、10/21 午前中" required></textarea>
+<textarea id="input_contact" name="entry.1145577336" placeholder="例：10/20 14:00〜、10/21 午前中" required></textarea>
 </div>
 
 <p class="note">ご入力いただいた情報は、選考のため採用企業へ共有させていただきます。</p>
@@ -164,24 +158,17 @@ document.getElementById('input_tel').addEventListener('input', function (e) {
   e.target.value = v;
 });
 
-// 「不可」を選んだときだけ理由欄を出す
-const attendance = document.getElementById('event_attendance');
+// 「不可」を選んだときだけ案内文を出す
 const reasonGroup = document.getElementById('reason_group');
-const reasonInput = document.getElementById('input_reason');
-attendance.addEventListener('change', function () {
-  const show = this.value === '不可';
-  reasonGroup.style.display = show ? 'block' : 'none';
-  reasonInput.required = show;
-  if (!show) reasonInput.value = '';
-});
+const attendance = document.getElementById('event_attendance');
+const toggleNotice = () => { reasonGroup.style.display = attendance.value === '不可' ? 'block' : 'none'; };
+// iPhone では change が「完了」を押すまで来ないことがあるので input でも切り替える
+attendance.addEventListener('input', toggleNotice);
+attendance.addEventListener('change', toggleNotice);
 
 // 送信 → 見えない枠の読み込み完了で完了表示に切り替え
 let submitted = false;
 document.getElementById('my_form').addEventListener('submit', function () {
-  const reason = reasonInput.value.trim();
-  const contact = document.getElementById('input_contact').value.trim();
-  document.getElementById('combined_text').value =
-    (reason ? `【不参加の理由・別日程の希望】\n${reason}\n\n` : '') + `【連絡可能日】\n${contact}`;
   submitted = true;
   const btn = document.getElementById('submit_btn');
   btn.disabled = true;
