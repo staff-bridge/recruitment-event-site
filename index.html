@@ -68,6 +68,13 @@ p,li,dd{text-wrap:pretty}
 @keyframes hd{to{box-shadow:0 12px 32px -22px rgba(0,0,0,.7)}}
 @keyframes hdp{from{padding-top:22px;padding-bottom:22px}to{padding-top:10px;padding-bottom:10px}}
 }
+@media (max-width: 767px){
+html{scroll-padding-top:64px}
+.hd>div{animation:none!important;padding:10px 16px!important;flex-wrap:nowrap!important}
+.hd .navlink,.hd-sub{display:none!important}
+.hd-logo{font-size:14px!important;letter-spacing:0.22em!important}
+.hd-entry{min-height:36px!important;padding:0 16px!important;font-size:13px!important}
+}
 @media (prefers-reduced-motion: reduce){
 .curtain{display:none}
 .kb,.fu,.trk,.ln,.reveal,.rule,.lbl,.stag>*,.px,.hd,.hd>div,.logo,.cl,.sheen::after{animation:none}
@@ -83,15 +90,15 @@ p,li,dd{text-wrap:pretty}
 <header class="hd" style="position: sticky; top: 0; z-index: 50; background: var(--darka); color: var(--on); border-bottom: 1px solid var(--dline); backdrop-filter: blur(8px)">
 <div style="max-width: 1200px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 24px">
 <div style="display: flex; flex-direction: column; gap: 0">
-<span style="font-size: 19px; font-weight: 500; letter-spacing: 0.28em; line-height: 1.3; white-space: nowrap">STAFF BRIDGE</span>
-<span style="font-size: 11px; color: var(--onmuted2); letter-spacing: 0.12em; white-space: nowrap">スタッフブリッジ ｜ 人材紹介 ご紹介案件</span>
+<span class="hd-logo" style="font-size: 19px; font-weight: 500; letter-spacing: 0.28em; line-height: 1.3; white-space: nowrap">STAFF BRIDGE</span>
+<span class="hd-sub" style="font-size: 11px; color: var(--onmuted2); letter-spacing: 0.12em; white-space: nowrap">スタッフブリッジ ｜ 人材紹介 ご紹介案件</span>
 </div>
 <nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; font-size: 13px">
 <a class="navlink" href="#overview" style="color: var(--onmuted); text-decoration: none">イベント概要</a>
 <a class="navlink" href="#positions" style="color: var(--onmuted); text-decoration: none">募集ポジション</a>
 <a class="navlink" href="#conditions" style="color: var(--onmuted); text-decoration: none">エントリー条件</a>
 <a class="navlink" href="#salary" style="color: var(--onmuted); text-decoration: none">給与・待遇</a>
-<a class="btn" href="https://forms.gle/eX6rwBH7q4b59fFf6" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; background: var(--on); color: var(--dark); text-decoration: none; font-weight: 500; letter-spacing: 0.1em">エントリー</a>
+<a class="btn hd-entry" href="https://forms.gle/eX6rwBH7q4b59fFf6" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; background: var(--on); color: var(--dark); text-decoration: none; font-weight: 500; letter-spacing: 0.1em">エントリー</a>
 </nav>
 </div>
 </header>
@@ -104,7 +111,7 @@ p,li,dd{text-wrap:pretty}
 </div>
 <div style="max-width: 880px; margin: 0 auto; padding: 72px 24px 0; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px">
 <span class="trk" style="font-size: 13px; letter-spacing: 0.4em; color: var(--onmuted2); animation-delay: 2.4s">TOKYO SPECIAL RECRUITMENT EVENT</span>
-<h1 style="margin: 0; font-weight: 500; font-size: clamp(28px, 4.4vw, 46px); line-height: 1.55; letter-spacing: 0.08em"><span class="nw ln" style="animation-delay: 2.8s">1日で完結する、</span><br><span class="nw ln" style="animation-delay: 3.1s">ラグジュアリーへの一歩。</span></h1>
+<h1 style="margin: 0; font-weight: 500; font-size: min(clamp(28px, 4.4vw, 46px), 6.4vw); line-height: 1.55; letter-spacing: 0.08em"><span class="nw ln" style="animation-delay: 2.8s">1日で完結する、</span><br><span class="nw ln" style="animation-delay: 3.1s">ラグジュアリーへの一歩。</span></h1>
 <p class="fu" style="margin: 0; color: var(--onmuted); font-size: 16px; max-width: 600px; animation-delay: 3.6s">現場の責任者が大集結する、1日限りの選考イベント。<br>採用担当者と現場で活躍するリテールマネージャーが、PRADA JAPAN のリアルな職場環境や働き方を直接お話しします。</p>
 <div class="fu" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px 48px; padding: 24px 0; border-top: 1px solid var(--dline); border-bottom: 1px solid var(--dline); width: 100%; animation-delay: 3.9s">
 <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 11px; color: var(--onmuted2); letter-spacing: 0.2em">DATE</span><span style="font-size: 18px; white-space: nowrap">2026年11月19日（木）</span></div>
@@ -188,11 +195,11 @@ p,li,dd{text-wrap:pretty}
 <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 40px; padding: 22px 0; border-bottom: 1px solid var(--line2)"><div style="flex: 0 1 340px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 18px; font-weight: 500; letter-spacing: 0.04em; white-space: nowrap">Stock Assistant</span><span style="font-size: 13px; color: var(--accent)">ストック担当</span></div><span style="flex: 1 1 360px; min-width: 0; font-size: 15px; color: var(--muted)">商品の入出庫・在庫管理・バックヤード業務を担当</span></div>
 </div>
 </div>
-<div class="reveal" style="display: flex; flex-wrap: wrap; gap: 16px 40px; padding: 24px 28px; background: var(--bg)">
-<span style="font-size: 12px; letter-spacing: 0.2em; color: var(--accent); flex: 0 0 auto">AREA</span>
-<div style="display: flex; flex-wrap: wrap; gap: 16px 24px; flex: 1 1 320px; font-size: 15px">
-<div style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 2px; padding-left: 20px; border-left: 1px solid var(--line)"><span style="white-space: nowrap">都内エリア</span><span style="font-size: 13px; color: var(--muted)">※店舗のご指定はできかねます</span></div>
-<div style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 2px; padding-left: 20px; border-left: 1px solid var(--line)"><span style="white-space: nowrap">御殿場アウトレット店（PRADA）</span></div>
+<div class="reveal" style="display: flex; flex-direction: column; align-items: center; gap: 20px; padding: 32px 28px; background: var(--bg); text-align: center">
+<span style="font-size: 12px; letter-spacing: 0.2em; color: var(--accent)">AREA</span>
+<div style="width: 100%; max-width: 640px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 1px; background: var(--line)">
+<div style="background: var(--bg); padding: 16px; min-height: 96px; box-sizing: border-box; display: flex; align-items: center; justify-content: center"><span style="position: relative; font-size: 17px; font-weight: 500">都内エリア<span style="position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 2px; font-size: 11px; font-weight: 400; color: var(--muted); white-space: nowrap">※店舗のご指定はできかねます</span></span></div>
+<div style="background: var(--bg); padding: 16px; min-height: 96px; box-sizing: border-box; display: flex; align-items: center; justify-content: center"><span style="font-size: 17px; font-weight: 500">御殿場アウトレット店（PRADA）</span></div>
 </div>
 </div>
 </div>
@@ -204,7 +211,7 @@ p,li,dd{text-wrap:pretty}
 <span class="lbl" style="font-size: 13px; letter-spacing: 0.4em; color: var(--accent)">03 — REQUIREMENTS</span>
 <h2 style="margin: 0; font-weight: 500; font-size: clamp(24px, 3vw, 32px); letter-spacing: 0.08em"><span class="nw">イベント限定！</span><span class="nw">エントリー条件</span></h2>
 <span class="rule" style="display: block; width: 48px; height: 1px; background: var(--rule)"></span>
-<p style="margin: 8px 0 0; font-size: 18px; max-width: 680px"><span class="nw">「ラグジュアリー未経験だから…」と</span><span class="nw">諦める必要はありません。</span><br><span class="nw">即戦力だけでなく、</span><span class="nw">ポテンシャル層も積極的に採用しています。</span></p>
+<p style="margin: 8px 0 0; font-size: clamp(15px, 4.6vw, 18px); max-width: 680px"><span class="nw">「ラグジュアリー未経験</span><span class="nw">だから…」と</span><span class="nw">諦める必要はありません。</span><br><span class="nw">即戦力だけでなく、</span><span class="nw">ポテンシャル層も</span><span class="nw">積極的に採用しています。</span></p>
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 24px">
 <div class="reveal" style="flex: 1 1 400px; min-width: 0; background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--ink); padding: 32px; display: flex; flex-direction: column; gap: 16px">
