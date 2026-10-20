@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>エントリーフォーム｜東京エリア特別採用イベント｜スタッフブリッジ</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500&amp;display=swap">
+<style>
+:root{--bg:#F5F2ED;--ink:#1C1A17;--muted:#5E574D;--accent:#6B5739;--line:#DDD6CB;--rule:#8E7A5A;--dark:#14120F;--on:#F5F2ED;--onmuted:#D9D2C6;--err:#A0362B}
+*{box-sizing:border-box}
+html{background:var(--dark)}
+body{margin:0;min-height:100vh;padding:64px 20px;font-family:'Zen Old Mincho',serif;color:var(--ink);letter-spacing:0.04em;line-height:1.8;word-break:auto-phrase;
+  background:linear-gradient(rgba(20,18,15,.45),rgba(20,18,15,.6)),url('bg.jpg') center/cover no-repeat fixed var(--dark)}
+.top{max-width:560px;margin:0 auto 20px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;color:var(--on);white-space:nowrap}
+.top a{color:var(--onmuted);font-size:13px;text-decoration:none}
+.top a:hover{text-decoration:underline}
+.brand{font-size:15px;font-weight:500;letter-spacing:0.28em}
+.card{max-width:560px;margin:0 auto;padding:48px 40px;background:rgba(245,242,237,.95);border:1px solid var(--line);box-shadow:0 24px 48px -24px rgba(0,0,0,.6)}
+.head{text-align:center;margin-bottom:36px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.eyebrow{font-size:12px;letter-spacing:0.4em;color:var(--accent)}
+h1{margin:0;font-weight:500;font-size:24px;letter-spacing:0.16em}
+.sub{font-size:13px;color:var(--muted)}
+.rule{display:block;width:48px;height:1px;background:var(--rule);margin-top:6px}
+.group{margin-bottom:24px}
+label,.label{display:block;margin-bottom:8px;font-size:14px;font-weight:500}
+.req{display:inline-block;margin-left:8px;vertical-align:1px;white-space:nowrap;font-size:11px;font-weight:400;color:var(--accent);border:1px solid var(--rule);padding:0 6px;line-height:1.6;letter-spacing:0.1em}
+input[type=text],input[type=tel],select,textarea{width:100%;padding:12px 14px;font:inherit;font-size:16px;letter-spacing:0.02em;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:0;transition:border-color .2s;-webkit-appearance:none;appearance:none}
+select{background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%236B5739' stroke-width='1.2'/%3E%3C/svg%3E") right 14px center no-repeat;padding-right:36px}
+input:focus,select:focus,textarea:focus{border-color:var(--ink);outline:none}
+textarea{min-height:96px;resize:vertical}
+.hint{font-size:12px;color:var(--muted);margin-top:6px}
+#reason_group{display:none}
+.note{font-size:12px;color:var(--muted);margin:8px 0 20px;line-height:1.8}
+.submit{width:100%;min-height:60px;margin-top:8px;font:inherit;font-size:16px;font-weight:500;letter-spacing:0.2em;color:var(--on);background:var(--dark);border:none;cursor:pointer;transition:opacity .3s}
+.submit:hover{opacity:.85}
+.submit:disabled{opacity:.5;cursor:default}
+.msg{text-align:center;display:none;flex-direction:column;align-items:center;gap:14px;padding:16px 0}
+.msg p{margin:0}
+.msg a{color:var(--accent)}
+.is-sent #my_form,.is-closed #my_form{display:none}
+.is-sent #sent_msg,.is-closed:not(.is-sent) #closed_msg{display:flex}
+@media (max-width:480px){body{padding:24px 12px}.card{padding:32px 20px}.brand{font-size:13px;letter-spacing:0.2em}.top a{font-size:12px}}
+</style>
+<script>
+// LP と同じく 2026/11/15 18:30（日本時間）以降は受付終了表示。?preview=closed で事前確認できる
+(function(){var close=new Date('2026-11-15T18:30:00+09:00');if(Date.now()>=close.getTime()||/[?&]preview=closed\b/.test(location.search))document.documentElement.classList.add('is-closed')})();
+</script>
+</head>
+<body>
+
+<div class="top"><span class="brand">STAFF BRIDGE</span><a href="./">← イベント詳細へ</a></div>
+
+<div class="card">
+<div class="head">
+<span class="eyebrow">ENTRY FORM</span>
+<h1>エントリーフォーム</h1>
+<span class="sub"><span style="display:inline-block">東京エリア特別採用イベント</span><span style="display:inline-block">（PRADA ／ Church’s）</span><br>応募締切 11月15日（日）18:30</span>
+<span class="rule"></span>
+</div>
+
+<form id="my_form" action="https://docs.google.com/forms/d/e/1FAIpQLSd_r-wTcn399lbXP8NmthgpWlxUKPd1fhn78Xfy_eThrWo5IQ/formResponse" method="POST" target="hidden_iframe">
+<input type="hidden" name="pageHistory" value="0,1,2">
+<input type="hidden" id="combined_text" name="entry.1145577336">
+
+<div class="group">
+<label for="input_name">お名前（フルネーム）<span class="req">必須</span></label>
+<input type="text" id="input_name" name="entry.1205796722" placeholder="山田 太郎" autocomplete="name" required>
+</div>
+
+<div class="group">
+<label for="input_tel">電話番号<span class="req">必須</span></label>
+<input type="tel" id="input_tel" name="entry.580034546" placeholder="090-1234-5678" autocomplete="tel" required>
+</div>
+
+<div class="group">
+<label for="event_attendance">11/19 イベント参加有無<span class="req">必須</span></label>
+<select id="event_attendance" name="entry.765697573" required>
+<option value="">選択してください</option>
+<option value="可能">可能</option>
+<option value="シフト調整中">シフト調整中</option>
+<option value="不可">不可</option>
+</select>
+</div>
+
+<div class="group" id="reason_group">
+<div style="margin-bottom: 16px; padding: 14px 16px; border-left: 2px solid var(--rule); background: rgba(255,255,255,.6); font-size: 13px; line-height: 1.8"><span style="font-weight: 500">イベント不参加の方へ。</span><br>通常選考をいたしますので、弊社よりご連絡させていただきます。</div>
+<label for="input_reason">不参加の理由・別日程の希望など<span class="req">必須</span></label>
+<textarea id="input_reason" placeholder="不参加の理由や、別日での面談希望日などをご記入ください。"></textarea>
+</div>
+
+<div class="group">
+<label for="input_area">希望エリア<span class="req">必須</span></label>
+<select id="input_area" name="entry.607485896" required>
+<option value="">選択してください</option>
+<option value="都内エリア">都内エリア</option>
+<option value="御殿場">御殿場</option>
+</select>
+</div>
+
+<div class="group">
+<label for="input_position">希望ポジション<span class="req">必須</span></label>
+<select id="input_position" name="entry.1725532513" required>
+<option value="">選択してください</option>
+<option value="Store Director（店舗統括責任者）">Store Director（店舗統括責任者）</option>
+<option value="Store Manager（店長）">Store Manager（店長）</option>
+<option value="Assistant Store Manager（副店長）">Assistant Store Manager（副店長）</option>
+<option value="Department Manager（部門責任者）">Department Manager（部門責任者）</option>
+<option value="In Store CRM Manager（店舗CRM担当）">In Store CRM Manager（店舗CRM担当）</option>
+<option value="Client Advisor（販売スタッフ）">Client Advisor（販売スタッフ）</option>
+<option value="In Store Visual Merchandiser（店舗VMD）">In Store Visual Merchandiser（店舗VMD）</option>
+<option value="Cashier（キャッシャー／レジ担当）">Cashier（キャッシャー／レジ担当）</option>
+<option value="Stock Assistant（ストック担当）">Stock Assistant（ストック担当）</option>
+</select>
+</div>
+
+<div class="group">
+<label for="input_history">過去プラダジャパンへのエントリー<span class="req">必須</span></label>
+<select id="input_history" name="entry.1571080802" required>
+<option value="">選択してください</option>
+<option value="過去1年以内にエントリー有">過去1年以内にエントリー有</option>
+<option value="過去1年以上前にエントリー有">過去1年以上前にエントリー有</option>
+<option value="エントリー歴なし">エントリー歴なし</option>
+</select>
+</div>
+
+
+<div class="group">
+<label for="input_contact">連絡可能日（平日で3候補以上）<span class="req">必須</span></label>
+<textarea id="input_contact" placeholder="例：10/20 14:00〜、10/21 午前中" required></textarea>
+</div>
+
+<p class="note">ご入力いただいた情報は、選考のため採用企業へ共有させていただきます。</p>
+<button type="submit" class="submit" id="submit_btn">送信する</button>
+</form>
+
+<div class="msg" id="sent_msg">
+<span class="eyebrow">THANK YOU</span>
+<p style="font-size:18px;font-weight:500">エントリーを受け付けました</p>
+<p style="font-size:14px;color:var(--muted)">ご応募ありがとうございます。<br>内容を確認のうえ、担当者よりご連絡いたします。</p>
+<a href="./">イベント詳細に戻る</a>
+</div>
+
+<div class="msg" id="closed_msg">
+<span class="eyebrow">CLOSED</span>
+<p style="font-size:18px;font-weight:500">本イベントの募集は終了しました</p>
+<p style="font-size:14px;color:var(--muted)">たくさんのご応募、誠にありがとうございました。</p>
+<a href="./">イベント詳細に戻る</a>
+</div>
+</div>
+
+<!-- 送信先（Googleフォーム）の画面に移動せず、このページ内で完了表示を出すための見えない枠 -->
+<iframe name="hidden_iframe" id="hidden_iframe" title="送信用" style="display:none"></iframe>
+
+<script>
+// 電話番号の自動ハイフン
+document.getElementById('input_tel').addEventListener('input', function (e) {
+  let raw = e.target.value.replace(/\D/g, '').slice(0, 11);
+  let v = raw;
+  if (raw.length > 3 && raw.length <= 7) v = `${raw.slice(0, 3)}-${raw.slice(3)}`;
+  else if (raw.length > 7 && raw.length <= 10) v = `${raw.slice(0, 2)}-${raw.slice(2, 6)}-${raw.slice(6)}`;
+  else if (raw.length > 10) v = `${raw.slice(0, 3)}-${raw.slice(3, 7)}-${raw.slice(7)}`;
+  e.target.value = v;
+});
+
+// 「不可」を選んだときだけ理由欄を出す
+const attendance = document.getElementById('event_attendance');
+const reasonGroup = document.getElementById('reason_group');
+const reasonInput = document.getElementById('input_reason');
+attendance.addEventListener('change', function () {
+  const show = this.value === '不可';
+  reasonGroup.style.display = show ? 'block' : 'none';
+  reasonInput.required = show;
+  if (!show) reasonInput.value = '';
+});
+
+// 送信 → 見えない枠の読み込み完了で完了表示に切り替え
+let submitted = false;
+document.getElementById('my_form').addEventListener('submit', function () {
+  const reason = reasonInput.value.trim();
+  const contact = document.getElementById('input_contact').value.trim();
+  document.getElementById('combined_text').value =
+    (reason ? `【不参加の理由・別日程の希望】\n${reason}\n\n` : '') + `【連絡可能日】\n${contact}`;
+  submitted = true;
+  const btn = document.getElementById('submit_btn');
+  btn.disabled = true;
+  btn.textContent = '送信中…';
+});
+document.getElementById('hidden_iframe').addEventListener('load', function () {
+  if (!submitted) return;
+  document.documentElement.classList.add('is-sent');
+  window.scrollTo(0, 0);
+});
+</script>
+</body>
+</html>
