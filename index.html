@@ -75,6 +75,11 @@ html{scroll-padding-top:64px}
 .hd-logo{font-size:14px!important;letter-spacing:0.22em!important}
 .hd-entry{min-height:36px!important;padding:0 16px!important;font-size:13px!important}
 }
+@media (max-width: 600px){
+.area-row{flex-direction:column}
+.area-row>span{padding:6px 0!important}
+.area-sep{border-left:none!important;border-top:1px solid var(--rule);padding-top:10px!important}
+}
 @media (prefers-reduced-motion: reduce){
 .curtain{display:none}
 .kb,.fu,.trk,.ln,.reveal,.rule,.lbl,.stag>*,.px,.hd,.hd>div,.logo,.cl,.sheen::after{animation:none}
@@ -195,12 +200,13 @@ html{scroll-padding-top:64px}
 <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 40px; padding: 22px 0; border-bottom: 1px solid var(--line2)"><div style="flex: 0 1 340px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 18px; font-weight: 500; letter-spacing: 0.04em; white-space: nowrap">Stock Assistant</span><span style="font-size: 13px; color: var(--accent)">ストック担当</span></div><span style="flex: 1 1 360px; min-width: 0; font-size: 15px; color: var(--muted)">商品の入出庫・在庫管理・バックヤード業務を担当</span></div>
 </div>
 </div>
-<div class="reveal" style="display: flex; flex-direction: column; align-items: center; gap: 20px; padding: 32px 28px; background: var(--bg); text-align: center">
+<div class="reveal" style="display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 36px 24px; background: var(--bg); text-align: center">
 <span style="font-size: 12px; letter-spacing: 0.2em; color: var(--accent)">AREA</span>
-<div style="width: 100%; max-width: 640px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 1px; background: var(--line)">
-<div style="background: var(--bg); padding: 16px; min-height: 96px; box-sizing: border-box; display: flex; align-items: center; justify-content: center"><span style="position: relative; font-size: 17px; font-weight: 500">都内エリア<span style="position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 2px; font-size: 11px; font-weight: 400; color: var(--muted); white-space: nowrap">※店舗のご指定はできかねます</span></span></div>
-<div style="background: var(--bg); padding: 16px; min-height: 96px; box-sizing: border-box; display: flex; align-items: center; justify-content: center"><span style="font-size: 17px; font-weight: 500">御殿場アウトレット店（PRADA）</span></div>
+<div class="area-row" style="display: flex; justify-content: center; align-items: center; font-size: 17px; font-weight: 500; line-height: 1.6">
+<span style="padding: 4px 36px">都内エリア</span>
+<span class="area-sep" style="padding: 4px 36px; border-left: 1px solid var(--rule)">御殿場アウトレット店（PRADA）</span>
 </div>
+<span style="font-size: 11px; color: var(--muted)">※都内エリアは、店舗のご指定はできかねます</span>
 </div>
 </div>
 </section>
